@@ -69,7 +69,7 @@ footer{
    /*Your code here.*/
    position: relative;
    animation-name: logo_wiggle;
-   animation-duration: 15s;
+   animation-duration: 2s;
 }
 
 /* Cards! */
@@ -89,8 +89,11 @@ footer{
   border-radius: 7px;
   padding: 0 0 50px 0;
   /*Your code here.*/
-  /*Take a look at flex-basis*/
+  /*display: flex;*/
   flex-basis: 400px;
+  justify-content: center;
+  align-items: center;
+  /*Take a look at flex-basis*/
 }
 
 .card > header{
@@ -135,7 +138,9 @@ footer{
 /* Gallery! */
 .gallery{
   min-height: 600px;
+  display: flex;
   /*Your code here again.*/
+  flex-wrap: wrap;
 }
 
 .gallery > img{
@@ -179,6 +184,7 @@ header{
   /* Cards! */
   .card {
     /*Your  code here again.*/
+    flex-basis: 225px;
   }
 
   .card_big{
@@ -207,8 +213,25 @@ header{
     flex-basis: 200px;
   }
   /*Your code here again.*/
-  /*You will want four selectors*/  
+  /*You will want four selectors*/ 
+  .pricing{
+    flex-direction: column;
+    align-items: flex-start;
+  } 
+  
+  .gallery{
+    display: none;
+  }
+
+  #gallery{
+    display: none;
+  }
 }
 
 /*Your code here again.*/ 
 /*Add media query to handle reduced-motion*/
+@media prefers-reduced-motion {
+  .logo {
+    animation-duration: 0s; 
+  }
+}
